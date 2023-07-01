@@ -1,0 +1,1 @@
+ici, si on a des calculs ou du traitement, logique, il faut le faire à travers un service
