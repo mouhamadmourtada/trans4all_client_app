@@ -3,6 +3,8 @@ import { Button, Pressable, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { FontAwesome } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
+import { Card} from 'react-native-paper';
+
 import {
     DrawerContentScrollView,
     DrawerItemList,
@@ -11,6 +13,8 @@ import {
 
 import myDrawerItems from '../../constants/myDrawerItems';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import Colors from '../../constants/Colors';
+import { Ionicons } from '@expo/vector-icons'; 
 
 
 function CustomDrawerContent(props) {
@@ -18,9 +22,14 @@ function CustomDrawerContent(props) {
         <>
             <View>
                 {/* profil  */}
-                 <View style = {{height : 100, backgroundColor : 'green'}}>
+                <View style = {{flexDirection : 'column'}}>
+                  <Ionicons style = {{marginTop: 10, textAlign : 'center'}} name="person-circle" size={150} color="black" />
+                  <View style = {{flexDirection : 'column', justifyContent: 'center', marginLeft : 10 }}>
+                    <Text style = {{fontSize: 20, marginBottom : 10, color : Colors.jaune}}>Mouhamad Mourtada</Text>
+                    <Text style = {{fontSize: 20, marginBottom : 10, color : Colors.jaune}}>DIOP</Text>
+                  </View>
 
-                 </View>
+                </View>
             </View>
       <DrawerContentScrollView {...props}>
         {/* <DrawerItemList {...props} /> */}
@@ -29,6 +38,7 @@ function CustomDrawerContent(props) {
             <DrawerItem
                 key={item.route}
                 label={item.title}
+                style = {{ marginHorizontal : 20, marginVertical : 10, fontWeight : 400, }}
                 onPress={() => props.navigation.navigate(item.route)}
                 
                 icon={({ focused, color, size }) => (
