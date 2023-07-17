@@ -6,7 +6,7 @@ import Home from './screens/Home';
 import Profil from './screens/Profil';
 import CustomDrawerContent from './components/molecules/CustomDrawerContent';
 import MainDrawerNavigator from './navigation/DrawerNavigation';
-
+import 'react-native-gesture-handler';
 
 const Drawer = createDrawerNavigator();
 function MyDrawer() {
@@ -14,7 +14,7 @@ function MyDrawer() {
   return (
     <Drawer.Navigator
     screenOptions = {{
-      // headerShown : false,
+      headerShown : false,
       drawerType : 'front', // comment le drawer apparait
       swipeEdgeWidth : 400, // la largeur du drawer
       swipeEnabled : true, // c'est clair swipe enable

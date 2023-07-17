@@ -23,6 +23,14 @@ const myDrawerItems
       title: 'historique des course',
       icon: 'history',
       // style: { color: 'red' },
+      // <FontAwesomeIcon icon="fa-solid fa-right-from-bracket" />
+    },
+    {
+      route: 'login',
+      title: 'Se Deconnecter',
+      icon: 'arrow-left',
+      // style: { color: 'red' },
+      // <FontAwesomeIcon icon="fa-solid fa-right-from-bracket" />
     },
   ];
   
